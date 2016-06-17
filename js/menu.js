@@ -41,7 +41,8 @@ $(document).ready(function() {
 	    $(document).on('scroll', $.throttle(function() {
 	        
 	        var stop = $(this).scrollTop();
-				        
+			
+			if($(window).scrollTop() > (80)) {	        
 	        if (stop > lastScrollTop){
 	            console.log('down');
 	            // scrolling down
@@ -62,6 +63,7 @@ $(document).ready(function() {
 		        } 
 	        } 
 	        lastScrollTop = stop;
+	        }
 		        
 	    }, 100));
 
